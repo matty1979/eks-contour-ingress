@@ -13,4 +13,4 @@ spec:
     solvers:
     - dns01:
         route53:
-          region: us-west-1
+          region: us-west-2
