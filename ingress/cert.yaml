@@ -7,9 +7,9 @@ metadata:
     fluxcd.io/ignore: "true"
 spec:
   secretName: cert
-  commonName: "*.example.com"
+  commonName: "*.octo-speed.com"
   dnsNames:
-  - "*.example.com"
+  - "*.octo-speed.com"
   issuerRef:
     name: letsencrypt-prod
     kind: ClusterIssuer

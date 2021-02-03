@@ -6,11 +6,11 @@ metadata:
     fluxcd.io/ignore: "true"
 spec:
   acme:
-    email: user@users.noreply.github.com
+    email: matty1979@users.noreply.github.com
     privateKeySecretRef:
       name: letsencrypt-prod
     server: https://acme-v02.api.letsencrypt.org/directory
     solvers:
     - dns01:
         route53:
-          region: eu-west-1
+          region: us-west-1
