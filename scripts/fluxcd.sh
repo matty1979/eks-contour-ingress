@@ -18,6 +18,7 @@ fluxctl install \
 --manifest-generation=true \
 --namespace=fluxcd | kubectl apply -f -
 
+
 #Setup Git Sync 
 #At startup, Flux generates a SSH key and logs the public key. Find the public key with:
 fluxctl identity --k8s-fwd-ns fluxcd
