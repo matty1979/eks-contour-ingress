@@ -17,3 +17,22 @@ spec:
         route53:
           region: us-west-2
 EOF
+
+export DOMAIN="octo-speed.com" && \
+cat << EOF | tee ingress/cert.yaml
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: cert
+  namespace: projectcontour
+  annotations:
+    fluxcd.io/ignore: "false"
+spec:
+  secretName: cert
+  commonName: "*.${DOMAIN}"
+  dnsNames:
+  - "*.${DOMAIN}"
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+EOF
